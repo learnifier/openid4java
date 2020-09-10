@@ -3,9 +3,9 @@
                       http://maven.apache.org/maven-v4_0_0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.openid4java</groupId>
+  <groupId>com.learnifier.thirdparty.org.openid4java</groupId>
   <artifactId>openid4java</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-hack1</version>
   <packaging>jar</packaging>
   <name>OpenID4Java</name>
   <description>
@@ -308,18 +308,6 @@
             <exclude>**/infocard/**</exclude>
           </excludes>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -775,17 +763,16 @@
     <url>http://openid4java.googlecode.com/svn/trunk/</url>
   </scm>
   <distributionManagement>
-    <!-- https://docs.sonatype.com/display/NX/OSS+Repository+Hosting -->
-    <repository>
-      <id>openid4java-staging</id>
-      <name>OpenID4Java Staging Repository</name>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>openid4java-snapshots</id>
-      <name>OpenID4Java Snapshot Repository</name>
-      <url>http://oss.sonatype.org/content/repositories/openid4java-snapshots/</url>
-    </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>Dabox Release Repository</name>
+            <url>http://buildbox.int.dabox.se:8081/repository/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <name>Dabox Snapshot Repository</name>
+            <id>snapshots</id>
+            <url>http://buildbox.int.dabox.se:8081/repository/snapshots/</url>
+        </snapshotRepository>
   </distributionManagement>
 
   <profiles>
