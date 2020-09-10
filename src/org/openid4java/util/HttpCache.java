@@ -146,8 +146,10 @@ public class HttpCache extends AbstractHttpFetcher
                     httpResponse.getAllHeaders(), body.getBody());
             resp.setBodySizeExceeded(body.isBodyTruncated());
 
-            // save result in cache
-            _getCache.put(url, resp);
+	    if (statusCode == 200) {
+              // save result in cache
+              _getCache.put(url, resp);
+	    }
         }
         finally
         {
