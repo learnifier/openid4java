@@ -756,12 +756,7 @@
     <system>Google Code Issue</system>
     <url>http://code.google.com/p/openid4java/issues/list</url>
   </issueManagement>
-  <scm>
-    <connection>scm:svn:http://openid4java.googlecode.com/svn/trunk/</connection>
-    <developerConnection>scm:svn:https://openid4java.googlecode.com/svn/trunk/</developerConnection>
-    <tag>HEAD</tag>
-    <url>http://openid4java.googlecode.com/svn/trunk/</url>
-  </scm>
+
   <distributionManagement>
         <repository>
             <id>releases</id>
