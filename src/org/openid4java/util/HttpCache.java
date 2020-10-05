@@ -344,8 +344,10 @@ public class HttpCache extends AbstractHttpFetcher
                     requestOptions.getMaxRedirects(), head.getURI().toString(),
                     httpResponse.getAllHeaders(), null);
 
-            // save result in cache
-            _headCache.put(url, resp);
+            // save result in cache if we get a successful status code
+            if (statusCode >= 200 && statusCode <= 399) {
+                _headCache.put(url, resp);
+            }
         }
         finally
         {
